@@ -53,7 +53,7 @@ func (t *TopN[E]) Add(x E) {
 	heap.Pop((*topN[E])(t))
 }
 
-// Take returns the top N elements among those added with [Add].
+// Take returns the top N elements among those added with [TopN.Add].
 // The order of elements that compare equal is unspecified.
 // Take takes the elements out of t, resetting it for another collection.
 func (t *TopN[E]) Take() []E {
